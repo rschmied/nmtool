@@ -1,0 +1,26 @@
+[tool.poetry]
+name = "nmtool"
+version = "0.1.0"
+description = ""
+authors = ["Ralph Schmieder <ralph.schmieder@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+
+[tool.poetry.dev-dependencies]
+pytest = "^7.1.1"
+black = "^22.3.0"
+pytest-cov = "^3.0.0"
+pylama = "^8.3.8"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.pytest.ini_options]
+addopts = "--import-mode importlib --showlocals --cov-branch --cov-report term-missing --cov-report=xml --cov=nmtool" 
+# asyncio_mode = "auto"
+testpaths = [
+    "tests"
+]
+# python_files = "tests.py test_*.py *_tests.py"

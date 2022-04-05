@@ -1,0 +1,6 @@
+coverage.xml
+dist
+__pycache__
+.coverage
+.pytest_cache
+.venv
